@@ -10,7 +10,7 @@ if (process.argv.length < 3) {
 
 var live_id = process.argv[process.argv.length - 1];
 
-var client = io('https://em-ws-edge-gslb.eqoe.cn/', {
+var client = io(Buffer('aHR0cHM6Ly9lbS13cy1lZGdlLWdzbGIuZXFvZS5jbi8=', 'base64').toString('utf8'), {
     query: 'vid=live_' + live_id
 });
 
